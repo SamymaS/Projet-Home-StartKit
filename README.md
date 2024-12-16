@@ -53,5 +53,6 @@ Projet-Home-StartKit/
 ## 🤝 Auteurs
 - **Samy Boudaoud** : Développement du code et réalisation des tests
 - **Youssouf Abayazid** : Assemblage des composants et montage électronique
+- **Fatim Dicko** : Câblage + montage éléctronique
 
 ---
