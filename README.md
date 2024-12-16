@@ -36,17 +36,17 @@ Ceci est un projet scolaire visant à comprendre les principes de l'Internet des
 ```
 Projet-Home-StartKit/
 │
-├── code/
+├── code/           # Contient tous les fichiers .ino
 │   ├──       # Contrôle de la LED
 │   ├──       # Contrôle du servo-moteur
 │   ├──       # Capteur température et humidité
 │   └── ...   # Autres codes pour chaque module
+├── libraries/      # Contient les bibliothèques nécessaires
+└── README.md       # Documentation du projet
 │
 ├── docs/
 │   ├──          # Documentation utilisateur
-│   └──      # Schéma des connexions
-│
-└── README.md                  # Ce fichier
+│   └──          # Scénarios
 ```
 
 
