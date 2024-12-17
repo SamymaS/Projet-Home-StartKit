@@ -75,6 +75,7 @@ Pour commencer avec ce projet, suivez les étapes ci-dessous :
     - Ouvrir l'un des fichiers .iso dans le répertoire codes/.
     - Sélectionnez la bonne carte ESP32 et le bon port série dans Outils > Type de carte et Outils > Port.
     - Cliquez sur Téléverser pour envoyer le code à la carte.
+
 ---
 
 ## 🖥️ Installation des prérequis
