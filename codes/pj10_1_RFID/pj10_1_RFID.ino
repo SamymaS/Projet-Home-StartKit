@@ -1,10 +1,13 @@
+#include <ESP32_Servo.h>
+
+#include <dummy.h>
+
 //**********************************************************************************
 /*  
  * Filename    : RFID
  * Description : RFID reader UID
  * Auther      : http//www.keyestudio.com
 */
-#include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 LiquidCrystal_I2C mylcd(0x27,16,2);
 #include <ESP32_Servo.h>

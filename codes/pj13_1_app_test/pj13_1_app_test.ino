@@ -2,16 +2,12 @@
 #include <WiFi.h>
 #include <ESPmDNS.h>
 #include <WiFiClient.h>
-
+#include "GlobalLibrary.h"
 String item = "0";
 const char* ssid = "ChinaNet-2.4G-0DF0";
 const char* password = "ChinaNet@233";
 WiFiServer server(80);
-
-#include <Wire.h>
-#include <LiquidCrystal_I2C.h>
 LiquidCrystal_I2C mylcd(0x27,16,2);
-#include <analogWrite.h>
 #define fanPin1 19
 #define fanPin2 18
 #define led_y 12  //Define the yellow led pin to 12

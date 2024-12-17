@@ -1,3 +1,7 @@
+#include <NetworkClientSecure.h>
+#include <WiFiClientSecure.h>
+#include <ssl_client.h>
+
 #include <WiFi.h>
 #include <ESPmDNS.h>
 #include <WiFiClient.h>
@@ -16,7 +20,6 @@ WiFiServer server(80);
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 LiquidCrystal_I2C mylcd(0x27,16,2);
-#include <analogWrite.h>
 #include "xht11.h"
 xht11 xht(17);
 //#include <ESP32_Servo.h>

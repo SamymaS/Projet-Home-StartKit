@@ -1,4 +1,3 @@
-#include <analogWrite.h>
 #define fanPin1 19
 #define fanPin2 18
 #define btn1 16
@@ -8,7 +7,7 @@ int btn_count2 = 0;
 int speed_val = 130; //Define the speed variables
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200 );
   pinMode(btn1, INPUT);
   pinMode(btn2, INPUT);
   pinMode(fanPin1, OUTPUT);
@@ -77,5 +76,4 @@ void loop() {
       }
       
     }
-  }
-}                                                                                                                                                       
+  }                                                                                                                                                 
