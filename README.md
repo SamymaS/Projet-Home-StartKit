@@ -134,12 +134,28 @@ Les différents tests réalisés et réussis ci-dessous :
 
 6. **Test du protocol MQTT :**
     ```bash
+    - état fonctionnel
     - Installer la bibliothèque PubSubClient
     - Se connecter au WIFI (connexion à distance sur téléphone)
     - Pouvoir envoyer un message via topic (QOS) pour allumer ou éteindre une LED
     - Idem pour gérer le ventilateur (msg : low, medium, on/off)
     (Yousssouf)
 
+7. **Test du RFID + MQTT:**
+    ```bash
+    - état fonctionnel
+    - UID et condition pour accéder à la maison
+    - SI uid est correcte -> servo rotation positive (0->180) (ouvrir porte) + envoyer topic "access granded"
+    - SI uid est incorrecte -> servo rotation négative (180->0) (fermer porte) + envoyer topic "access denied"
+    (fatim et Youssouf)
+
+8. **Test température et humidité + MQTT:**
+    ```bash
+    - état fonctionnel
+    - afficher température et humidité
+    - variation des données en fonction de l'environnement
+    - envoyer topic en fonction de la donnée enregistrée
+    
 ## Scénarios réalisés 
 Les différents scénarios réalisés et réussis ci-dessous :
 1. **Scénario bouton poussoir + allumage LED (interrupteur) :**
@@ -163,6 +179,9 @@ Les différents scénarios réalisés et réussis ci-dessous :
     - Appuyer sur le bouton 1 pour ouvrir la porte, rotation positive (0->180)
     - Appuyer sur le bouton 2 pour fermer la porte, rotation négative (180->0)
     (Youssouf)
+4. **Scénario RFID :**
+    ```bash
+    - Etat fonctionnel.
 
 ## 🤝 Auteurs
 - **Samy Boudaoud** : Développement du code et réalisation des tests
