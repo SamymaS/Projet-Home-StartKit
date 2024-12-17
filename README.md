@@ -36,7 +36,7 @@ Ceci est un projet scolaire visant à comprendre les principes de l'Internet des
 ```
 Projet-Home-StartKit/
 │
-├── code/     # Contient tous les fichiers .ino
+├── codes/     # Contient tous les fichiers .ino
 │   ├──       # Contrôle de la LED
 │   ├──       # Contrôle du servo-moteur
 │   ├──       # Contrôle du ventilateur
