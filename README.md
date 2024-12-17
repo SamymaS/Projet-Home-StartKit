@@ -74,7 +74,7 @@ Pour commencer avec ce projet, suivez les étapes ci-dessous :
     - Ouvrir l'un des fichiers .iso dans le répertoire codes/.
     - Sélectionnez la bonne carte ESP32 et le bon port série dans Outils > Type de carte et Outils > Port.
     - Cliquez sur Téléverser pour envoyer le code à la carte.
-
+---
 
 ## 🖥️ Installation des prérequis
 
@@ -95,7 +95,60 @@ Pour commencer avec ce projet, suivez les étapes ci-dessous :
 4. **Connexion des composants :**
     ```bash
     - Suivez les schémas de connexions disponibles dans le dossier documentations 
-    
+
+
+## TEST réalisés 
+Les différents tests réalisés et réussis ci-dessous :
+1. **Test bouton poussoir :**
+    ```bash
+    - état fonctionnel.
+    - appui = signal, relâche = non signal ou appui = signal, relâche = signal différent
+    - Visualisation du signal avec AnalogWrite
+    (Samy)
+
+2. **Test LED :**
+    ```bash
+    - état fonctionnel
+    - délai allumer/éteindre de 1 seconde
+    (Samy)
+
+3. **Test ventilateur :**
+    ```bash
+    - état fonctionnel
+    - délai allumer/éteindre de 2 seconde
+    (Samy)
+
+4. **Test servo :**
+    ```bash
+    - état fonctionnel
+    - loop + délai de variation de position du servo
+    - toutes les 2 secondes la postion du servo varie entre 0 et 180 degré puis de 180 à 0
+    (Youssouf)
+
+
+## Scénarios réalisés 
+Les différents scénarios réalisés et réussis ci-dessous :
+1. **Scénario bouton poussoir + allumage LED (interrupteur) :**
+    ```bash
+    - Etat fonctionnel.
+    - Signal ON/OFF, si signal envoyé par appui bouton poussoir -> allumer la LED. Si bouton relâcher -> eteindre LED
+    - Si bouton allumer alors faire clignoter la LED pendant 3 secondes avec un delai
+    (Samy)
+
+2. **Scénario bouton poussoir + Ventilateur :**
+    ```bash
+    - Etat fonctionnel.
+    - Signal ON/OFF, Allumer le ventilateur a chaque appui
+    - bouton 2 change la vitesse du ventilateur lorsque celui-ci est allumé
+    - 3 niveaux de vitesses (130, 180 et 230) valeurs PWM.
+    (Samy)
+3. **Scénario bouton poussoir + Servo (ouvrir la porte de la maison) :**
+    ```bash
+    - Etat fonctionnel.
+    - le servo moteur est relié mécaniquement à une roue cranté relié elle même à une porte
+    - Appuyer sur le bouton 1 pour ouvrir la porte, rotation positive (0->180)
+    - Appuyer sur le bouton 2 pour fermer la porte, rotation négative (180->0)
+    (Youssouf)
 
 ## 🤝 Auteurs
 - **Samy Boudaoud** : Développement du code et réalisation des tests
