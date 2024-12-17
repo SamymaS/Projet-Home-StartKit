@@ -97,7 +97,7 @@ Pour commencer avec ce projet, suivez les étapes ci-dessous :
 4. **Connexion des composants :**
     ```bash
     - Suivez les schémas de connexions disponibles dans le dossier documentations 
-
+---
 
 ## TEST réalisés 
 Les différents tests réalisés et réussis ci-dessous :
@@ -157,6 +157,8 @@ Les différents tests réalisés et réussis ci-dessous :
     - variation des données en fonction de l'environnement
     - envoyer topic en fonction de la donnée enregistrée
     (Fatim)
+---
+
 ## Scénarios réalisés 
 Les différents scénarios réalisés et réussis ci-dessous :
 1. **Scénario bouton poussoir + allumage LED (interrupteur) :**
