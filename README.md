@@ -132,7 +132,6 @@ Les différents tests réalisés et réussis ci-dessous :
     - se connecter au WIFI distant avec un appareil compatible (téléphone)
     (Fatim)
 
-
 ## Scénarios réalisés 
 Les différents scénarios réalisés et réussis ci-dessous :
 1. **Scénario bouton poussoir + allumage LED (interrupteur) :**
