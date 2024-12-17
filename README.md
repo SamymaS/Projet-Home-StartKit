@@ -129,8 +129,16 @@ Les différents tests réalisés et réussis ci-dessous :
 5. **Test du WIFI :**
     ```bash
     - Configurer le nom PID + mot de passe
-    - se connecter au WIFI distant avec un appareil compatible (téléphone)
+    - Se connecter au WIFI distant avec un appareil compatible (téléphone)
     (Fatim)
+
+6. **Test du protocol MQTT :**
+    ```bash
+    - Installer la bibliothèque PubSubClient
+    - Se connecter au WIFI (connexion à distance sur téléphone)
+    - Pouvoir envoyer un message via topic (QOS) pour allumer ou éteindre une LED
+    - Idem pour gérer le ventilateur (msg : low, medium, on/off)
+    (Yousssouf)
 
 ## Scénarios réalisés 
 Les différents scénarios réalisés et réussis ci-dessous :
