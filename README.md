@@ -147,7 +147,7 @@ Les différents tests réalisés et réussis ci-dessous :
     - UID et condition pour accéder à la maison
     - SI uid est correcte -> servo rotation positive (0->180) (ouvrir porte) + envoyer topic "access granded"
     - SI uid est incorrecte -> servo rotation négative (180->0) (fermer porte) + envoyer topic "access denied"
-    (fatim et Youssouf)
+    (Fatim et Youssouf)
 
 8. **Test température et humidité + MQTT:**
     ```bash
@@ -155,7 +155,7 @@ Les différents tests réalisés et réussis ci-dessous :
     - afficher température et humidité
     - variation des données en fonction de l'environnement
     - envoyer topic en fonction de la donnée enregistrée
-    
+    (Fatim)
 ## Scénarios réalisés 
 Les différents scénarios réalisés et réussis ci-dessous :
 1. **Scénario bouton poussoir + allumage LED (interrupteur) :**
@@ -178,10 +178,7 @@ Les différents scénarios réalisés et réussis ci-dessous :
     - le servo moteur est relié mécaniquement à une roue cranté relié elle même à une porte
     - Appuyer sur le bouton 1 pour ouvrir la porte, rotation positive (0->180)
     - Appuyer sur le bouton 2 pour fermer la porte, rotation négative (180->0)
-    (Youssouf)
-4. **Scénario RFID :**
-    ```bash
-    - Etat fonctionnel.
+    (Youssouf + Samy)
 
 ## 🤝 Auteurs
 - **Samy Boudaoud** : Développement du code et réalisation des tests
