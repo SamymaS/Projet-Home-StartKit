@@ -74,6 +74,12 @@ Pour commencer avec ce projet, suivez les étapes ci-dessous :
     - Ouvrir l'un des fichiers .iso dans le répertoire codes/.
     - Sélectionnez la bonne carte ESP32 et le bon port série dans Outils > Type de carte et Outils > Port.
     - Cliquez sur Téléverser pour envoyer le code à la carte.
+
+5. **Téléverser du WIFI :**
+    ```bash
+    - Configurer le nom PID + mot de passe
+    - se connecter au WIFI distant avec un appareil compatible (téléphone)
+    (Fatim)
 ---
 
 ## 🖥️ Installation des prérequis
