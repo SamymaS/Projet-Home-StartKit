@@ -271,7 +271,7 @@ Pourquoi utiliser Node-RED ?
 ---
 
 ## 🤝 Auteurs
-- **Samy Boudaoud** : Développement du code et réalisation des tests
+- **Samy Boudaoud** : Développement du code et réalisation des tests + readme
 - **Youssouf Abayazid** : Assemblage des composants et montage électronique
 - **Fatim Dicko** : Câblage + montage éléctronique
 
