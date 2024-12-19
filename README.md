@@ -204,7 +204,7 @@ Pourquoi utiliser Node-RED ?
 1. **Automatisation facile:**
     ```bash
     - Créez des scénarios pour automatiser vos capteurs et actionneurs (par exemple, allumer une LED si la température     dépasse 30°C).
-    -  Simplifiez les interactions entre plusieurs modules et capteurs sans écrire de code complexe.
+    - Simplifiez les interactions entre plusieurs modules et capteurs sans écrire de code complexe.
 
 2. **Supervision en temps réel:**
     ```bash
@@ -239,6 +239,7 @@ Pourquoi utiliser Node-RED ?
   - Accédez à l'interface graphique via votre navigateur à l'adresse :
   - ```bash
     http://localhost:1880
+
 ---
 
 ## Connecter Node-RED à votre broker MQTT
@@ -266,6 +267,8 @@ Pourquoi utiliser Node-RED ?
   Flux graphique :
      
      MQTT IN (Température) --> Switch (Si >30°C) --> MQTT OUT (LED ON)
+
+---
 
 ## 🤝 Auteurs
 - **Samy Boudaoud** : Développement du code et réalisation des tests
