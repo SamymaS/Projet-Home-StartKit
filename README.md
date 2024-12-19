@@ -15,17 +15,19 @@ Ceci est un projet scolaire visant à comprendre les principes de l'Internet des
 - **Carte microcontrôleur** : ESP32
 - **Capteurs** :
   - Capteur PIR (détection de mouvement)
-  - Capteur de température et d'humidité (DHT11/DHT22)
-  - Capteur de lumière
+  - Capteur de température et d'humidité (XHT11)
+  - Capteur de chaleur
   - Capteur de gaz
-  - Module RFID
-  - Capteur de pluie
+  - Module RFID + carte et badge
+  - Capteur de pluie (humidité)
 - **Actionneurs** :
-  - LED (blanche, jaune, rouge, etc.)
+  - LED jaune
+  - LED RGB
   - Servo-moteur
   - Écran LCD1602 avec interface I2C
   - Ventilateur (contrôlé par PWM)
   - Buzzer (émission de sons/mélodies)
+  - 2 Bouttons poussoir
 - **Modules de communication** :
   - Bluetooth (HC-05)
   - WiFi intégré à l'ESP32
@@ -114,26 +116,38 @@ Les différents tests réalisés et réussis ci-dessous :
     - délai allumer/éteindre de 1 seconde
     (Samy)
 
-3. **Test ventilateur :**
+3. **Test buzzer + boutton :**
+    ```bash
+    - état fonctionnel.
+    - appui = signal + buzzer ON, relâche = non signal -> buzzer OFF
+    (Samy)
+
+ 4. **Test Ecran LCD + témpérature:**
+    ```bash
+    - état fonctionnel.
+    - affichage des différentes informations   
+    (Samy)
+
+5. **Test ventilateur :**
     ```bash
     - état fonctionnel
     - délai allumer/éteindre de 2 seconde
     (Samy)
 
-4. **Test servo :**
+6. **Test servo :**
     ```bash
     - état fonctionnel
     - loop + délai de variation de position du servo
     - toutes les 2 secondes la postion du servo varie entre 0 et 180 degré puis de 180 à 0
     (Youssouf)
 
-5. **Test du WIFI :**
+7. **Test du WIFI :**
     ```bash
     - Configurer le nom PID + mot de passe
     - Se connecter au WIFI distant avec un appareil compatible (téléphone)
     (Fatim)
 
-6. **Test du protocol MQTT :**
+8. **Test du protocol MQTT :**
     ```bash
     - état fonctionnel
     - Installer la bibliothèque PubSubClient
@@ -142,7 +156,7 @@ Les différents tests réalisés et réussis ci-dessous :
     - Idem pour gérer le ventilateur (msg : low, medium, on/off)
     (Yousssouf)
 
-7. **Test du RFID + MQTT:**
+9. **Test du RFID + MQTT:**
     ```bash
     - état fonctionnel
     - UID et condition pour accéder à la maison
@@ -150,7 +164,7 @@ Les différents tests réalisés et réussis ci-dessous :
     - SI uid est incorrecte -> servo rotation négative (180->0) (fermer porte) + envoyer topic "access denied"
     (Fatim et Youssouf)
 
-8. **Test température et humidité + MQTT:**
+10. **Test température et humidité + MQTT:**
     ```bash
     - état fonctionnel
     - afficher température et humidité
@@ -182,6 +196,76 @@ Les différents scénarios réalisés et réussis ci-dessous :
     - Appuyer sur le bouton 1 pour ouvrir la porte, rotation positive (0->180)
     - Appuyer sur le bouton 2 pour fermer la porte, rotation négative (180->0)
     (Youssouf + Samy)
+
+---
+
+## Suite du projet UTILISATION de Node-RED (à faire)
+Pourquoi utiliser Node-RED ?
+1. **Automatisation facile:**
+    ```bash
+    - Créez des scénarios pour automatiser vos capteurs et actionneurs (par exemple, allumer une LED si la température     dépasse 30°C).
+    -  Simplifiez les interactions entre plusieurs modules et capteurs sans écrire de code complexe.
+
+2. **Supervision en temps réel:**
+    ```bash
+    - Utilisez des tableaux de bord pour visualiser les données de vos capteurs (température, humidité, état des actionneurs, etc.).
+    - Ajoutez des boutons, jauges ou graphiques interactifs.
+
+3. **Communication centralisée via MQTT:**
+   ```bash
+   - Node-RED peut se connecter à votre broker MQTT pour publier ou souscrire à des topics.
+   - Combinez les messages de vos capteurs/actionneurs pour créer un système IoT cohérent.
+
+4. **Interopérabilité:**
+   ```bash
+   - Intégrez facilement d'autres systèmes comme des bases de données, des services web, ou des assistants vocaux.
+
+---
+
+## Comment configurer Node-RED avec MQTT ?
+1. **Installer Node-RED**
+    Installez Node.js :
+    ```bash
+    Téléchargez et installez Node.js depuis nodejs.org.
+
+2. **Installer Node-RED**
+    ```bash
+    Une fois Node.js installé, ouvrez un terminal et exécutez :
+    bash : npm install -g --unsafe-perm node-red
+    
+3. **Lancer Node-RED**
+    ```bash
+    bash : node-red
+  - Accédez à l'interface graphique via votre navigateur à l'adresse :
+  - ```bash
+    http://localhost:1880
+---
+
+## Connecter Node-RED à votre broker MQTT
+1. **Ajouter un noeud MQTT**
+    ```bash
+     -  Dans l'interface Node-RED, ouvrez l'onglet Palette.
+     -  Faites glisser un nœud MQTT IN ou MQTT OUT dans l’espace de travail.
+
+2. **Configurer le broker MQTT**
+     ```bash
+      - Double-cliquez sur le nœud MQTT.
+      - Entrez l'adresse de votre broker MQTT (par exemple, mqtt://localhost ou l'IP de votre serveur MQTT).
+      - Configurez les topics pour chaque capteur/actionneur, par exemple :
+          - Capteur de température : home/sensors/temperature
+          - Actionneur LED : home/actions/led
+
+3. **Créer des flux pour automatiser les capteurs/actionneurs**
+     ```bash
+      - Exemple : Allumer une LED si la température dépasse un seuil :
+
+      - Ajoutez un nœud MQTT IN pour lire les données du capteur de température (topic : home/sensors/temperature).
+      - Ajoutez un nœud Switch pour vérifier si la température est supérieure à 30°C.
+      - Ajoutez un nœud MQTT OUT pour envoyer une commande à la LED (topic : home/actions/led).
+  
+  Flux graphique :
+     
+     MQTT IN (Température) --> Switch (Si >30°C) --> MQTT OUT (LED ON)
 
 ## 🤝 Auteurs
 - **Samy Boudaoud** : Développement du code et réalisation des tests
